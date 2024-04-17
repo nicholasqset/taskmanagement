@@ -80,7 +80,7 @@ class Controller {
         $delete = $db->Execute("DELETE FROM taskmanagement where id = ".$id);
         if (!$delete->Save()) {
             $data['status'] = 0;
-            $data['message'] = 'Fail: ' . $orm->ErrorMsg();
+            $data['message'] = 'Fail: ' . $db->ErrorMsg();
         } else {
             $data['status'] = 1;
             $data['message'] = 'Success';

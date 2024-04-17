@@ -38,7 +38,7 @@
                     $tskstatus = $rs->fields['tskstatus'];
                     
                     $edit = "<a href=\"\" onclick=\"edit({$id})\">edit</a>";
-                    $delete = "<a href=\"\" onclick=\"delete({$id})\">delete</a>";
+                    $delete = "<a href=\"\" onclick=\"purge({$id})\">delete</a>";
                     
                     
                     $table .= "<tr>";
@@ -237,7 +237,7 @@
                 $('#id').value = id;
             }
             
-            function delete(id){
+            function purge(id){
                 var data = 'id='+ id;
 
                 $.ajax({
