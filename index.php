@@ -229,7 +229,7 @@
                 });
             }
             
-            edit(id, tskname, tskdate, tskpriority, tskstatus){
+            function edit(id, tskname, tskdate, tskpriority, tskstatus){
                 $('#tskname').value = tskname;
                 $('#tskdate').value = tskdate;
                 $('#tskpriority').value = tskpriority;
@@ -237,7 +237,7 @@
                 $('#id').value = id;
             }
             
-            delete(id){
+            function delete(id){
                 var data = 'id='+ id;
 
                 $.ajax({
